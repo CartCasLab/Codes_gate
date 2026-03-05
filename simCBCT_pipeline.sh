@@ -166,7 +166,7 @@ for FILE in *.mha
 
 # rescaled and resampled secondary volumes are interpolated to obtain the same number of volumes as for primary
 # results will be in the folder "secondary_interpolated" 
-python3 ../../../interpolate_secondary_ES.py ../../data/gGeometry_H1.xml ../../data/gGeometry_H1sub10.xml 
+python3 ../../../interpolate_secondary1.py ../../data/gGeometry_H1.xml ../../data/gGeometry_H1sub10.xml 
 echo "Done processing secondary volumes"
 
 cd ..
@@ -182,8 +182,8 @@ else
 fi
 
 cd attenuation1
-# The function 'attenuation.py' computes the final projection with noise as primary + secondary (normalized w.r.t. the flatfield)
-python3 ../../attenuation_ES.py primary1 scatter1
+# The function 'attenuation1.py' computes the final projection with noise as primary + secondary (normalized w.r.t. the flatfield)
+python3 ../../attenuation1.py primary1 scatter1
 
 echo "Final attenuation volumes done - geom 1"
 cd ..
@@ -337,7 +337,7 @@ for FILE in *.mha
 
 # rescaled and resampled secondary volumes are interpolated to obtain the same number of volumes as for primary
 # results will be in the folder "secondary_interpolated" 
-python3 ../../../interpolate_secondary_ES.py ../../data/gGeometry_H2.xml ../../data/gGeometry_H2sub10.xml 
+python3 ../../../interpolate_secondary1.py ../../data/gGeometry_H2.xml ../../data/gGeometry_H2sub10.xml 
 echo "Done processing secondary volumes"
 
 cd ..
@@ -352,8 +352,8 @@ else
 fi
 
 cd attenuation2
-# The function 'attenuation.py' computes the final projection with noise as primary + secondary (normalized w.r.t. the flatfield)
-python3 ../../attenuation_ES.py primary2 scatter2
+# The function 'attenuation1.py' computes the final projection with noise as primary + secondary (normalized w.r.t. the flatfield)
+python3 ../../attenuation1.py primary2 scatter2
 cd ..
 echo "Final attenuation volumes done - geom 2"
 
